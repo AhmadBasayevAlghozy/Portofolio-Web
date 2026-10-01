@@ -27,6 +27,7 @@
   };
   menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
   links.forEach(a => a.addEventListener('click', () => setMenu(false)));
+  window.addEventListener('resize', () => { if (window.innerWidth > 820) setMenu(false); });
 
   /* Active nav indicator (smooth scroll dikerjakan CSS scroll-behavior) */
   const sections = links.map(a => document.querySelector(a.getAttribute('href')));
